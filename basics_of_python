@@ -1,0 +1,35 @@
+# This is a list of excersizes to put into some form for students to practice and manipulate. 
+# It would probably be best for the students to use the Python Shell to test each of these commands. 
+
+# LESSON ONE: Operators
+
+# Vocabulary
+
+Command - an individual instruction for a computer
+Operator - performs operations on values
+
+# Operations
+# Python can execute a variety of operations like arithmatic! Try out each of the following lines of code in the Shell.
+# When you are done, answer the questions below. 
+
+# Arithmatic
+>>> 3 + 7 # addition
+>>> 10 - 7 # subtraction
+>>> 7 * 10 # multiplication
+>>> 13 / 5 # division
+
+# Special cases
+>>> 3 ** 2 # ** means exponent so this is example is 3 to the 2nd power.
+>>> 5 // 2 # rounds the quotient down to the nearest whole number (called floor division)
+>>> 5 % 2 # returns the remainder (in this case 1) (called modulus)
+
+# Order of operations!
+>>> 3 + 3 * 5
+>>> (3 + 3) * 5
+
+# QUESTIONS: 
+1. What is the remainder of 49 divided by 6?
+2. What is 4 to the 5th power?
+3. What is the result of 10 modulus 7? 
+4. What is 10 / 4? What is 10 // 4? What is 10 % 4? Why are they all different answers? 
+5. Come up with an order of operations problem that has at least three operators, run it and write the answer. 
