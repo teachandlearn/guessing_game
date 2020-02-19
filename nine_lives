@@ -6,26 +6,8 @@
 
 import random
 
-# create variables and lists 
-## students should know: variables, booleans and lists
 
-lives = 9
-words = ['pizza','fairy', 'teeth', 'shirt', 'otter', 'plane', 'brush', 'horse', 'light', 'slide', 'frogs', 'ducks', 'bites'] # encourage students to add as many 5 letter words as possible!
-secret_word = random.choice(words)
-heart_symbol = u'\u2764'
-guessed_word_correctly = False
-
-# in the extra challenges, the students have the opportunity to change the game so the words are not five letter long
-# no new knowledge is needed for this if the students have completed the base project
-
-clue = []
-index = 0
-while index < len(secret_word):
-  clue.append('?')
-  index = index + 1
-
-# function: updates the secret word to be the guessed letter (if the guessed letter is in the word)
-## students should know: functions, while loops and counter pattern
+# function: update the clue based on user input (guess)
 
 def update_clue(guessed_letter, secret_word, clue):
   index = 0
@@ -35,44 +17,85 @@ def update_clue(guessed_letter, secret_word, clue):
     index = index + 1
 
 
-# allows players to choose difficulty
-## no new knowledge is needed for this if the base game is completed
+# function: returns True if the player wants to play again and returns False if the player does not
 
-difficulty = input('Choose difficulty (type 1, 2 or 3):\n 1 Easy \n 2 Normal \n 3 Hard \n')
-difficulty = int(difficulty)
+def play_some_more():
 
-if difficulty == 1:
-  lives = 12
-elif difficulty == 2:
+  play_again_choice = input('Do you want to play again? Yes or No')
+  play_again_choice = play_again_choice.lower()
+  
+  while True:
+    if play_again_choice == yes:
+      print('Awesome!')
+      return True
+    elif play_again_choice == no:
+      print('See you next time')
+      return False
+    else:
+      play_again_choice = input('Do you want to play again? Yes or No')
+      play_again_choice = play_again_choice.lower()
+
+play_again = True
+while play_again:
+  # create variables and lists 
+  ## students should know: variables, booleans and lists
+
   lives = 9
-else:
-  lives = 6
+  words = ['pizza','fairy', 'teeth', 'shirt', 'otter', 'plane', 'brush', 'horse', 'light', 'slide', 'frogs', 'ducks', 'bites'] # encourage students to add as many 5 letter words as possible!
+  secret_word = random.choice(words)
+  heart_symbol = u'\u2764'
+  guessed_word_correctly = False
 
-# main game loop
-## students should be familiar with selection, while loops and variables
+  # in the extra challenges, the students have the opportunity to change the game so the words are not five letter long
+  # no new knowledge is needed for this if the students have completed the base project
 
-while lives > 0:
-  # outputs game status and allows player input of guesses
-  print(clue)
-  print('Lives left: ' + heart_symbol * lives)
-  guess = input('Guess a letter or the whole word')
-  
-  # ends game if the word is correct
-  if guess == secret_word:
-    guessed_word_correctly = True
-    break
-  
-  # assesses guess for accuracy and acts
-  if guess in secret_word:
-    update_clue(guess, secret_word, clue)
+  clue = []
+  index = 0
+  while index < len(secret_word):
+    clue.append('?')
+    index = index + 1
+
+
+  # allows players to choose difficulty
+  ## no new knowledge is needed for this if the base game is completed
+
+  difficulty = input('Choose difficulty (type 1, 2 or 3):\n 1 Easy \n 2 Normal \n 3 Hard \n')
+  difficulty = int(difficulty)
+
+  if difficulty == 1:
+    lives = 12
+  elif difficulty == 2:
+    lives = 9
   else:
-    print('Incorrect. You lose a life')
-    lives = lives - 1
+    lives = 6
 
-# decides if the player wins or loses
-## students should know selection
+  # main game loop
+  ## students should be familiar with selection, while loops and variables
 
-if guessed_word_correctly:
-  print('You won! The secret word was ' + secret_word)
-else:
-  print('You lost! The secret word was ' + secret_word)
+  while lives > 0:
+    # outputs game status and allows player input of guesses
+    print(clue)
+    print('Lives left: ' + heart_symbol * lives)
+    guess = input('Guess a letter or the whole word')
+
+    # ends game if the word is correct
+    if guess == secret_word:
+      guessed_word_correctly = True
+      break
+
+    # assesses guess for accuracy and acts
+    if guess in secret_word:
+      update_clue(guess, secret_word, clue)
+    else:
+      print('Incorrect. You lose a life')
+      lives = lives - 1
+
+  # decides if the player wins or loses
+  ## students should know selection
+
+  if guessed_word_correctly:
+    print('You won! The secret word was ' + secret_word)
+  else:
+    print('You lost! The secret word was ' + secret_word)
+    
+  play_again = play_some_more()
