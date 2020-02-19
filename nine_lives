@@ -1,0 +1,13 @@
+# = actual comments
+## = educator notes
+
+# make the imports
+## good opportunity to talk about importing libraries
+import random
+
+# create variables and lists 
+## students should know: variables and lists
+lives = 9
+words = ['pizza','fairy', 'teeth', 'shirt', 'otter', 'plane']
+secret_word = random.choice(words) 
+
