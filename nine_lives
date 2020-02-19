@@ -11,11 +11,18 @@ import random
 
 lives = 9
 words = ['pizza','fairy', 'teeth', 'shirt', 'otter', 'plane', 'brush', 'horse', 'light', 'slide', 'frogs', 'ducks', 'bites'] # encourage students to add as many 5 letter words as possible!
-secret_word = random.choice(words) 
-clue = list('?????')
+secret_word = random.choice(words)
 heart_symbol = u'\u2764'
 guessed_word_correctly = False
 
+# in the extra challenges, the students have the opportunity to change the game so the words are not five letter long
+# no new knowledge is needed for this if the students have completed the base project
+
+clue = []
+index = 0
+while index < len(secret_word):
+  clue.append('?')
+  index = index + 1
 
 # function: updates the secret word to be the guessed letter (if the guessed letter is in the word)
 ## students should know: functions, while loops and counter pattern
@@ -29,7 +36,7 @@ def update_clue(guessed_letter, secret_word, clue):
 
 
 # allows players to choose difficulty
-## challenge for students who finish early, want the extra opportunity or want to make the game more fun
+## no new knowledge is needed for this if the base game is completed
 
 difficulty = input('Choose difficulty (type 1, 2 or 3):\n 1 Easy \n 2 Normal \n 3 Hard \n')
 difficulty = int(difficulty)
@@ -64,6 +71,7 @@ while lives > 0:
 
 # decides if the player wins or loses
 ## students should know selection
+
 if guessed_word_correctly:
   print('You won! The secret word was ' + secret_word)
 else:
