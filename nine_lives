@@ -10,7 +10,7 @@ import random
 ## students should know: variables, booleans and lists
 
 lives = 9
-words = ['pizza','fairy', 'teeth', 'shirt', 'otter', 'plane']
+words = ['pizza','fairy', 'teeth', 'shirt', 'otter', 'plane', 'brush', 'horse', 'light', 'slide', 'frogs', 'ducks', 'bites'] # encourage students to add as many 5 letter words as possible!
 secret_word = random.choice(words) 
 clue = list('?????')
 heart_symbol = u'\u2764'
