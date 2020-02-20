@@ -1,6 +1,9 @@
 # This is a list of excersizes to put into some form for students to practice and manipulate. 
 # It would probably be best for the students to use the Python Shell to test each of these commands. 
 
+###################################################################################################################
+###################################################################################################################
+
 # LESSON ONE: Operators
 
 # Vocabulary
@@ -33,3 +36,46 @@ Operator - performs operations on values
 3. What is the result of 10 modulus 7? 
 4. What is 10 / 4? What is 10 // 4? What is 10 % 4? Why are they all different answers? 
 5. Come up with an order of operations problem that has at least three operators, run it and write the answer. 
+
+###################################################################################################################
+###################################################################################################################
+
+# LESSON TWO: Variables
+
+# Vocabulary
+
+Variable - a placeholder for a piece of information that can change
+
+# Variable Big Ideas: 
+
+# Variables have a name and a value that can be called.
+>>> x = 10
+>>> x + 10
+
+# The value stored in a variable can be changed
+>>> y = 25
+>>> y = y / 25
+>>> y
+
+# variables can be a word, words (connected by spaces) or a letter
+>>> dog = 13
+>>> dog_plus_five = dog + 5
+>>> dog_plus_five
+
+>>> my_age = 14
+>>> my_age = my_age + 1
+>>> # What will the value of my age be?
+
+Questions: 
+1. Create a variable called ducks that is assigned the value 25. If ducks is divided by 3, how many ducks are left over?
+2. Create a variable called total_inheritance that is assigned the value 100,000. 
+   Create a variable called individual_inheritance and assign the value of total_inheritance divided by 5. 
+   What value is stored in individual_inheritance?
+3.
+4.
+5.
+###################################################################################################################
+###################################################################################################################
+
+
+
