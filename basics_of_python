@@ -77,5 +77,42 @@ Questions:
 ###################################################################################################################
 ###################################################################################################################
 
+# LESSON TWO: Types of Data
+
+# Vocabulary
+
+Integer - a positive or negative whole number
+Float - any decimal number
+String - any stretch of characters that are surrounded by "" OR ''
+Boolean - a type of data that is true or false
+
+# Types of Data Big Ideas: 
+
+# Integers are whole numbers
+>>> g = 9
+>>> g = 9 + 1
+
+# Floats are decimal numbers
+>>> dollars = 10.23
+>>> dollars = dollars + -10
+
+# Strings are used for lots of things
+>>>my_name = 'Mr. H'
+>>>my_occupation = 'Teacher'
+>>>my_hobbies = 'Programming'
+
+# Booleans are useful, but not right now
+>>>over_21 = True
+>>>three_hundred_dollars = False
+
+Questions: 
+1. 
+2. 
+3.
+4.
+5.
+###################################################################################################################
+###################################################################################################################
+
 
 
